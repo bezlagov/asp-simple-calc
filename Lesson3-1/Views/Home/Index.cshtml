@@ -1,0 +1,20 @@
+﻿@model string
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Calculator</h1>
+    <form action="/" method="post">
+        <div>
+            <input type="text" name="firstDigit" value="" />
+            <input type="text" name="secondDigit" value="" />
+        </div>
+        <p>Result: @(String.IsNullOrEmpty(Model)?"":Model)</p>
+        <input type="submit" value="*" name="operation" formaction="" />
+        <input type="submit" value="/" name="operation" formaction="" />
+        <input type="submit" value="+" name="operation" formaction="" />
+        <input type="submit" value="-" name="operation" formaction="" />
+
+    </form>
+</div>
